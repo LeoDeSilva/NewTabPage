@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device-width, intitial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title></title>
+    </head> 
+    <body>
+        <div class="container">
+
+            <div class="card">
+                <div class="header">
+                    <span class="emoji">📌</span>
+                    <span class="title">Today</span>
+                </div> 
+
+                <div class="content">
+                    <div id="task-list" class="list">
+                    </div>
+                    <input id="task-input" class="secondary" placeholder="+ New Task">
+                </div>
+
+            </div>
+
+            <div class="card"> 
+                <div class="header">
+                    <span class="emoji">🔖 <span>
+                    <span class="title">Bookmarks</span>
+                </div>
+
+                <div class="content">
+                    <div id="bookmark-list" class="list">
+                        
+                    </div>
+                    <input id="bookmark-input" class="secondary" placeholder="+ New Bookmarks">
+                </div>
+            </div>
+
+            <divc class="card"> 
+                <div class="header">
+                    <span class="emoji">📕 <span>
+                    <span class="title">Notes</span>
+                </div>
+
+                <div class="content">
+                    <div id="notes-textarea" class="secondary textarea"  spellcheck="false" contenteditable="true"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/main.js"></script>
+</html>

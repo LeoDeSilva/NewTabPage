@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+:root{
+    --heading-size: 25px;
+    --heading-color: #000;
+    --heading-font: 'Roboto', sans-serif;
+    --heading-weight: 500;
+
+    --emoji-size: 25px;
+
+    --secondary-font: 'Roboto Mono', monospace;
+    --secondary-color: #000;
+    --secondary-weight: 400;
+    --secondary-size: 17px;
+
+    --checkbox-color: #767676;
+    --checkbox-checked-color: #a7a7a7;
+
+}
+
+html, body{ 
+    margin: 0; 
+    height: 100%;
+}
+
+input{ 
+    border:  none; 
+    width: 100%;
+}
+
+.secondary:focus{ 
+    outline: none; 
+}
+
+.secondary{
+    border: none;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: var(--secondary-size);
+    font-weight: var(--secondary-weight);
+}
+
+.textarea{
+    max-width: 100%;
+    min-height: 20vh;
+    word-wrap: break-word;
+}
+
+.textarea:empty::before{
+    content:attr(data-placeholder)
+}
+
+.header{
+    margin-bottom: 10px;
+}
+
+.container{
+    margin: 100px 150px;
+}
+
+.card{
+    margin-bottom: 50px;
+}
+
+.content{
+    font-family: var(--secondary-font);
+}
+
+.title{
+    font-size: var(--heading-size);
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+.emoji{
+    font-size: var(--emoji-size);
+}
+
+.list{
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+}
+
+.task-title{
+    font-size: var(--secondary-size);
+    margin-left: 5px;
+}
+
+.checkbox{
+    width: 16px;
+    height: 16px;
+    border: 2.5px solid var(--checkbox-color);
+    border-radius: 5px;
+}
+
+.checkbox:hover{
+    cursor: pointer;
+}
+
+.checked{
+    background-color: var(--checkbox-checked-color);
+    border: 2.5px solid var(--checkbox-checked-color)
+
+}
+
+.strikethrough{
+    text-decoration: line-through;
+    color: var(--checkbox-checked-color)
+}
