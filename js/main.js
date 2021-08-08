@@ -73,6 +73,9 @@ function resetTextarea(){
 }
 
 
+function completeTask()
+
+
 function toggleTask(e){
     let parent = e.parentElement
     let title = parent.children[1]
