@@ -73,7 +73,7 @@ function resetTextarea(){
 }
 
 
-function completeTask()
+
 
 
 function toggleTask(e){
@@ -101,8 +101,6 @@ function toggleTask(e){
     }
 
     saveToStorage()
-
-
 }
 
 
