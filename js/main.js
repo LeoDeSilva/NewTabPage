@@ -180,7 +180,6 @@ setInterval(function() {
 
 },10000)
 
-setInterval(saveToStorage,100)
 
 window.onbeforeunload = function(){
     saveToStorage()
