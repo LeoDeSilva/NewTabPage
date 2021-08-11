@@ -39,6 +39,7 @@ function handleInputEventListner(e,tasks,taskList,bookmark,input){
         input.value = ""
 
         addTask(tasks, title, false, date, bookmark, id)
+        saveToStorage()
         refresh()
     }
 }
