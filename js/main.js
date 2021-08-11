@@ -13,7 +13,7 @@ let tasks = []
 let bookmarks = []
 
 tasks = localStorage.getItem("tasks") != null ? JSON.parse(localStorage.getItem("tasks")) : []
-tasks = localStorage.getItem("bookmarks") != null ? JSON.parse(localStorage.getItem("bookmarks")) : []
+bookmarks = localStorage.getItem("bookmarks") != null ? JSON.parse(localStorage.getItem("bookmarks")) : []
 notesTextarea.innerHTML = localStorage.getItem("notes") != null ? localStorage.getItem("notes") : ""
 
 
