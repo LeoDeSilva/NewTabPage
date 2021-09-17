@@ -12,16 +12,18 @@ const d = new Date();
 let tasks = [];
 let bookmarks = [];
 
-tasks =
-	localStorage.getItem("tasks") != null
-		? JSON.parse(localStorage.getItem("tasks"))
-		: [];
-bookmarks =
-	localStorage.getItem("bookmarks") != null
-		? JSON.parse(localStorage.getItem("bookmarks"))
-		: [];
-notesTextarea.innerHTML =
-	localStorage.getItem("notes") != null ? localStorage.getItem("notes") : "";
+updateTasks();
+
+//tasks =
+//localStorage.getItem("tasks") != null
+//? JSON.parse(localStorage.getItem("tasks"))
+//: [];
+//bookmarks =
+//localStorage.getItem("bookmarks") != null
+//? JSON.parse(localStorage.getItem("bookmarks"))
+//: [];
+//notesTextarea.innerHTML =
+//localStorage.getItem("notes") != null ? localStorage.getItem("notes") : "";
 
 function refresh() {
 	refreshTaskList(taskList, tasks);
@@ -144,6 +146,19 @@ function removeTask(e) {
 	saveToStorage();
 }
 
+function updateTasks() {
+	tasks =
+		localStorage.getItem("tasks") != null
+			? JSON.parse(localStorage.getItem("tasks"))
+			: [];
+	bookmarks =
+		localStorage.getItem("bookmarks") != null
+			? JSON.parse(localStorage.getItem("bookmarks"))
+			: [];
+	notesTextarea.innerHTML =
+		localStorage.getItem("notes") != null ? localStorage.getItem("notes") : "";
+}
+
 notesTextarea.addEventListener("focus", function (e) {
 	if (notesTextarea.innerHTML == notesPlaceholder) {
 		notesTextarea.innerHTML = "";
@@ -172,12 +187,16 @@ setInterval(function () {
 	refresh();
 }, 10000);
 
+setInterval(() => {
+	updateTasks();
+}, 100);
+
 //window.onbeforeunload = function(){
 //saveToStorage()
 //}
 
-$(document).ready(function () {
-	$(window).focus(function () {
-		window.location.reload(true);
-	});
-});
+//$(document).ready(function () {
+//$(window).focus(function () {
+//window.location.reload(true);
+//});
+//});
