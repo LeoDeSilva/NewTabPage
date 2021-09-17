@@ -8,12 +8,12 @@
     --emoji-size: 25px;
 
     --secondary-font: 'Roboto Mono', monospace;
-    --secondary-color: #000;
+    --secondary-color: rgb(58, 58, 58);
     --secondary-weight: 400;
     --secondary-size: 17px;
 
-    --checkbox-color: #767676;
-    --checkbox-checked-color: #a7a7a7;
+    --checkbox-color: rgb(58,58,58);
+    --checkbox-checked-color: #cccccc;
 
 }
 
@@ -83,6 +83,7 @@ input{
 .task{
     display: flex;
     align-items: center;
+    margin-bottom: 2.5px;
 }
 
 .task-title{
@@ -95,10 +96,12 @@ input{
     height: 16px;
     border: 2.5px solid var(--checkbox-color);
     border-radius: 5px;
+    transition: all .1s ease-in-out;
 }
 
 .checkbox:hover{
     cursor: pointer;
+    transform: scale(1.15); 
 }
 
 .checked{
