@@ -175,3 +175,9 @@ setInterval(function () {
 //window.onbeforeunload = function(){
 //saveToStorage()
 //}
+
+$(document).ready(function () {
+	$(window).focus(function () {
+		window.location.reload(true);
+	});
+});
