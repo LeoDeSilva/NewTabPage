@@ -16,8 +16,6 @@ tasks = localStorage.getItem("tasks") != null ? JSON.parse(localStorage.getItem(
 bookmarks = localStorage.getItem("bookmarks") != null ? JSON.parse(localStorage.getItem("bookmarks")) : []
 notesTextarea.innerHTML = localStorage.getItem("notes") != null ? localStorage.getItem("notes") : ""
 
-saveToStorage()
-
 function refresh(){
     refreshTaskList(taskList,tasks)
     refreshTaskList(bookmarkList, bookmarks)
